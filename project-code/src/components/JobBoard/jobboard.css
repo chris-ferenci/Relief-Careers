@@ -1,0 +1,6 @@
+#job-board-container{
+    display: grid;
+    grid-area: job-board;
+    background-color:#fff;
+    padding: 2rem;
+}

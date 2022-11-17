@@ -1,8 +1,15 @@
 #header{
+    display: grid;
     grid-area: header;
 }
 
 .header{
-    background-color: #f2f2f2;
-    width:100%;
+    background-color: #fff;
+    padding: 0 2rem 0 2rem;
+    border-bottom: 4px solid #5F01F5;
+}
+
+.header h1{
+    color: #4A00C2;
+    font-size: 1.3rem;
 }
