@@ -1,0 +1,5 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-template-areas: "header header";
+  }
