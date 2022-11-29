@@ -34,11 +34,12 @@ function fetchJobTitle (country, job_number) {
 
     fetch(fetch_url).then(item => item.json().then((json_item) => {
         console.log(json_item['data'][0]['fields']['title'].toString());
-        // return json_item['data'][0]['fields']['title']['5'].toString();
-    }));
+    })).then( (json_item) => {
+        return json_item['data'][0]['fields']['title']['5'].toString();
+    }
+    );
     
 
-    console.log(ret, "rohan");
 }
 
 export default JobCard;
