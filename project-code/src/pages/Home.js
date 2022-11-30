@@ -9,6 +9,7 @@ export const CountryContext = createContext();
 function Main(){
     
     const [activeCountry, setActiveCountry] = useState('United States');
+    const [job, set_jobs] = useState('')
 
     return(
         <>
