@@ -1,12 +1,16 @@
-
 import '../JobCard/jobcard.css';
+import { CountryContext } from '../../pages/Home';
+import { useContext } from 'react';
 
-function JobCard(){
+function JobCard (props) {
 
-    return(
+    const [activeCountry, setActiveCountry, jobs, setJobs] = useContext(CountryContext);
+    
+
+    return (
 
         <article className='job-card'>
-            <h1>Job Title</h1>
+            <h1> {props.title} </h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco 
@@ -21,5 +25,6 @@ function JobCard(){
 
     )
 }
+
 
 export default JobCard;
