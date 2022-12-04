@@ -1,0 +1,28 @@
+.landing-container{
+    margin: 0 auto;
+    padding: 5rem;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.landing-container h1{
+    margin: 0;
+    color: #2e2e2e;
+    font-size: 5rem;
+    letter-spacing: -.1rem;
+}
+
+.landing-container h4{
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: 0;
+    color: #4c4c4c;
+    margin-bottom: 3rem;
+}
+
+.btn-large {
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    font-size: 1.1rem;
+}
+

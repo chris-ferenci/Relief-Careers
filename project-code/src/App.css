@@ -3,13 +3,3 @@ html, body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
 }
-
-#grid-container {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 25% auto ;
-    grid-template-areas: 
-    "header header"
-    "sidebar job-board";
-    
-  }
