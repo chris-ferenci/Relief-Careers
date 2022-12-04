@@ -21,8 +21,18 @@
     margin-bottom: 3rem;
 }
 
+.landing-container p{
+    font-size: 1.4rem;
+ 
+}
+
+.description{
+    width: 75%;
+}
+
 .btn-large {
     padding: 1.5rem 2rem 1.5rem 2rem;
     font-size: 1.1rem;
+    display: inline-flex;
+    
 }
-

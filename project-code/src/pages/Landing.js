@@ -8,18 +8,22 @@ function Landing() {
   return(
 
     <article className='landing-container'>
-        <section>
+        <section className='hero'>
             <h1>Relief Careers</h1>
             <h4>Find work to help those most in need</h4>
-            <IconContext.Provider value={{size: "1rem"}}>
-            <a href="/browsejobs" className="btn btn-primary btn-large">
-                Browse Careers <FaChevronRight />
-            </a>
-            </IconContext.Provider>
 
-            <p>
-                Browse our collection of worldwide career opportunities in countries who are experiencing humanitarian crises.
-            </p>
+            
+            
+                <a href="/browsejobs" className="btn btn-primary btn-large">
+                Browse Careers 
+                <IconContext.Provider value={{size: "1.2rem"}}><FaChevronRight />
+                </IconContext.Provider>
+                </a>
+           
+           <article className="description">
+                <p>Browse our collection of worldwide career opportunities in countries experiencing humanitarian crises.
+                </p>
+            </article>
         </section>
 
 
