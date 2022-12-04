@@ -2,6 +2,8 @@ import JobCard from "../JobCard/JobCard";
 import '../JobBoard/jobboard.css'
 import { useContext } from "react";
 import { CountryContext } from "../../pages/Home";
+import { FaChevronRight } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 
 function JobBoard() {
@@ -16,7 +18,11 @@ function JobBoard() {
 
     return (
         <article id="job-board-container">
-            <h1>Available Jobs in {activeCountry}</h1>
+            <IconContext.Provider value={{ size: "1rem" }}>
+            <article className="title-card">
+                <h1>Available Jobs in {activeCountry} <FaChevronRight /></h1>
+            </article>
+            </IconContext.Provider>
 
             
 

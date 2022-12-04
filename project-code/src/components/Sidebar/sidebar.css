@@ -15,7 +15,7 @@ h2 {
 
 .sidebar ul{
     list-style: none;
-    font-size: 1.1rem;
+    margin-left:-1rem;
 }
 
 .sidebar li {

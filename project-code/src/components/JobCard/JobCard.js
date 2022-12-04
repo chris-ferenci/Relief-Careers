@@ -1,6 +1,8 @@
 import '../JobCard/jobcard.css';
 import { CountryContext } from '../../pages/Home';
 import { useContext } from 'react';
+import { FaChevronRight } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 function JobCard (props) {
 
@@ -10,17 +12,21 @@ function JobCard (props) {
     return (
 
         <article className='job-card'>
-            <h1> {props.title} </h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in 
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                deserunt mollit anim id est laborum.
-            </p>
-            <button className='btn btn-primary'>Apply</button>
+            <article className='description-container'>
+                <h1 className="card-title"> {props.title} </h1>
+                <h2 className="card-heading">Location</h2>
+                <p>United States</p>
+                <h2 className="card-heading">Description</h2>
+                <p>Jobs description goes here.</p>
+            </article>
+
+            <IconContext.Provider value={{size:".75rem"}}>
+            <article className="btn-group">
+                <a className="btn btn-primary" href={props.url}>Apply <FaChevronRight /></a>
+                <a className="btn btn-tertiary" href={props.url}>Learn More</a>
+            
+            </article>
+            </IconContext.Provider>
         </article>
 
     )
