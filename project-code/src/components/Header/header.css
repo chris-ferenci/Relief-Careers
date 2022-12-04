@@ -1,0 +1,29 @@
+#header{
+    display: grid;
+    grid-area: header;
+    display: flex;
+}
+
+.header{
+    background-color: #fff;
+    padding: 0 2rem 0 2rem;
+    border-bottom: 4px solid #5F01F5;
+    align-items: center;
+}
+
+.header h1{
+    color: #4A00C2;
+    font-size: 1.3rem;
+    display: inline-block;
+    
+}
+
+.header input{
+
+    width: 15%;
+    display: inline-block;
+    align-items: right;
+    margin-left: 65%;
+    
+    
+}
