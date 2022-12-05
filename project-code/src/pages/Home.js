@@ -3,6 +3,8 @@ import Header from '../components/Header/Header';
 import Sidebar from '../components/Sidebar/Sidebar';
 import JobBoard from '../components/JobBoard/JobBoard';
 
+import './home.css';
+
 
 export const CountryContext = createContext();
 
@@ -45,13 +47,13 @@ function Main() {
     }, []);
 
     return(
-        <>
+        <div id='grid-container'>
             <CountryContext.Provider value={[activeCountry, setActiveCountry, jobs, setJobs, searchQuery, setSearchQuery]}>
                 <Header />
                 <Sidebar />
                 <JobBoard />
             </CountryContext.Provider>
-        </>
+        </div>
     )
 }
 
