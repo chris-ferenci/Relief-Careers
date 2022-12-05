@@ -22,7 +22,6 @@ function Main() {
         let jobs_data = [];
         fetch('https://api.reliefweb.int/v1/jobs?appname=apidoc&profile=list&preset=latest&filter[field]=country&filter[value]=' + activeCountry).then((response) => response.json()).then((json_item) => {
             json_item['data'].forEach((item) => {
-                console.log(item);
                 jobs_data.push({
                     id: item['id'],
                     created_date: item['fields']['date']['created'],
@@ -44,7 +43,7 @@ function Main() {
 
     useEffect(() => {
         hitAPI();
-    }, []);
+    }, [activeCountry]);
 
     return(
         <div id='grid-container'>

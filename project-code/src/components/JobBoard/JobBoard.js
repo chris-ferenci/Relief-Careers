@@ -29,7 +29,6 @@ function JobBoard() {
             {
                 currentJobs.filter((item) => {if (searchQuery == ""){return item}
                 else if (item.job_title.toLowerCase().includes(searchQuery.toLowerCase())){return item}}).map((item, index) => {
-                    console.log(item);
                     return <JobCard 
                                 id={item['id']}
                                 key={item['id']}
