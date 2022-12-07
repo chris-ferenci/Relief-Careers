@@ -9,6 +9,13 @@
     color: #2e2e2e;
     border: 1px solid #ccc;
     border-radius: 1rem;
+    position: relative;
+    transition: transfrom 0.2s;
+}
+
+.job-card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .description-container{

@@ -3,6 +3,7 @@ import Header from '../components/Header/Header';
 import Sidebar from '../components/Sidebar/Sidebar';
 import JobBoard from '../components/JobBoard/JobBoard';
 
+
 import './home.css';
 
 
@@ -16,6 +17,7 @@ function Main() {
     const [activeCountry, setActiveCountry] = useState('United States');
     const [jobs, setJobs] = useState('');
     const [searchQuery, setSearchQuery] = useState('');
+    const [favorites, setFavorites] = useState([]);
 
     function hitAPI () {
 
@@ -45,14 +47,17 @@ function Main() {
         hitAPI();
     }, [activeCountry]);
 
+
     return(
-        <div id='grid-container'>
-            <CountryContext.Provider value={[activeCountry, setActiveCountry, jobs, setJobs, searchQuery, setSearchQuery]}>
-                <Header />
-                <Sidebar />
-                <JobBoard />
-            </CountryContext.Provider>
-        </div>
+        <React.StrictMode>
+            <div id='grid-container'>
+                <CountryContext.Provider value={[activeCountry, setActiveCountry, jobs, setJobs, searchQuery, setSearchQuery, favorites, setFavorites]}>
+                    <Header />
+                    <Sidebar />
+                    <JobBoard/>
+                </CountryContext.Provider>
+            </div>
+        </React.StrictMode>
     )
 }
 

@@ -11,14 +11,9 @@ function App() {
 
   return(
 
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Landing />}>
-          </Route>
-          <Route path="/browsejobs" element={<Home />}>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+    <div id="grid-container">
+    <Home />
+  </div>
      
 
    )
