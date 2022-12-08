@@ -9,15 +9,7 @@ import { IconContext } from "react-icons";
 function JobCard (props) {
 
 
-    const [ activeCountry, setActiveCountry, jobs, setJobs, favorites, setFavorites ] = useContext(CountryContext);
-
-    const addFavoriteJob = (job) => {
-        
-		const newFavoriteList = {...favorites, job};
-        console.log("list: ", newFavoriteList)
-		setFavorites(newFavoriteList);
-        console.log(setFavorites)
-	};
+    const [ activeCountry, setActiveCountry, jobs, setJobs ] = useContext(CountryContext);
 
 
     return (
@@ -38,9 +30,6 @@ function JobCard (props) {
                 <a className="btn btn-tertiary" href={props.url}>Learn More</a>
             </article>
             </IconContext.Provider>
-            <div onClick={(e) => { e.preventDefault(); addFavoriteJob(props)}}>
-                <Favorite />
-            </div>
         </article>
 
     )
