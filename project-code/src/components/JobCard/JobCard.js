@@ -12,15 +12,13 @@ function JobCard (props) {
     const [ activeCountry, setActiveCountry, jobs, setJobs, favorites, setFavorites ] = useContext(CountryContext);
 
     const addFavoriteJob = (job) => {
+        
 		const newFavoriteList = {...favorites, job};
         console.log("list: ", newFavoriteList)
 		setFavorites(newFavoriteList);
+        console.log(setFavorites)
 	};
 
-    const handleFavoriteClick = (job) => {
-        console.log("here")
-        addFavoriteJob(job);
-    }
 
     return (
 
@@ -40,7 +38,7 @@ function JobCard (props) {
                 <a className="btn btn-tertiary" href={props.url}>Learn More</a>
             </article>
             </IconContext.Provider>
-            <div onClick={(e) => { e.preventDefault(); handleFavoriteClick(props)}}>
+            <div onClick={(e) => { e.preventDefault(); addFavoriteJob(props)}}>
                 <Favorite />
             </div>
         </article>
