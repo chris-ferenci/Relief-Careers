@@ -1,13 +1,16 @@
 import '../JobCard/jobcard.css';
+import '../Favorite/favorite.css';
+import Favorite from '../Favorite/Favorite';
 import { CountryContext } from '../../pages/Home';
 import { useContext } from 'react';
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronRight, FaCommentsDollar } from "react-icons/fa";
 import { IconContext } from "react-icons";
 
 function JobCard (props) {
 
-    const [activeCountry, setActiveCountry, jobs, setJobs] = useContext(CountryContext);
-    
+
+    const [ activeCountry, setActiveCountry, jobs, setJobs ] = useContext(CountryContext);
+
 
     return (
 
@@ -16,7 +19,7 @@ function JobCard (props) {
                 <h1 className="card-title"> {props.title} </h1>
                 <h2 className="card-heading">Location</h2>
                 <p>{activeCountry}</p>
-                {console.log(props.sources)}
+                {/* {console.log(props.sources)} */}
                 <h2 className="card-heading">Source</h2>
                 <p>{props.sources[0]["name"]}</p>
             </article>
