@@ -1,5 +1,5 @@
 import JobCard from "../JobCard/JobCard";
-import '../JobBoard/jobboard.css'
+import '../JobBoard/jobboard.css';
 import { useContext } from "react";
 import { CountryContext } from "../../pages/Home";
 import { FaChevronRight } from "react-icons/fa";
@@ -10,6 +10,8 @@ function JobBoard() {
 
     const [activeCountry, setActiveCountry, activeExperience, setActiveExperience, jobs, setJobs, searchQuery] = useContext(CountryContext);
     let currentJobs = [];
+    
+
 
     //Having to do this because when I do a forEach on jobs, the code fails for some reason ~ Rohan
     for (let i = 0; i < jobs.length; i++) {
@@ -29,7 +31,7 @@ function JobBoard() {
             {
                 currentJobs.filter((item) => {if (searchQuery == ""){return item}
                 else if (item.job_title.toLowerCase().includes(searchQuery.toLowerCase())){return item}}).map((item, index) => {
-                    return <JobCard 
+                    return <JobCard
                                 id={item['id']}
                                 key={item['id']}
                                 created_date={item['created_date']}
@@ -41,6 +43,7 @@ function JobBoard() {
                                 href={item['href']}
                             />
                 })
+                
             }
 
             {/* <JobCard job_num="1"/> */}

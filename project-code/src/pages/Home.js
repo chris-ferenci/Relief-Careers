@@ -3,6 +3,7 @@ import Header from '../components/Header/Header';
 import Sidebar from '../components/Sidebar/Sidebar';
 import JobBoard from '../components/JobBoard/JobBoard';
 
+
 import './home.css';
 
 
@@ -17,6 +18,7 @@ function Main() {
     const [activeExperience, setActiveExperience] = useState('')
     const [jobs, setJobs] = useState('');
     const [searchQuery, setSearchQuery] = useState('');
+    const [favorites, setFavorites] = useState([]);
 
     function hitAPI () {
 
@@ -47,9 +49,10 @@ function Main() {
         hitAPI();
     }, [activeCountry, activeExperience]);
 
+
     return(
         <div id='grid-container'>
-            <CountryContext.Provider value={[activeCountry, setActiveCountry, activeExperience, setActiveExperience, jobs, setJobs, searchQuery, setSearchQuery]}>
+            <CountryContext.Provider value={[activeCountry, setActiveCountry, activeExperience, setActiveExperience, jobs, setJobs, searchQuery, setSearchQuery, favorites, setFavorites]}>
                 <Header />
                 <Sidebar />
                 <JobBoard />
