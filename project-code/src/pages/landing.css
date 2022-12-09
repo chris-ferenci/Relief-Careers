@@ -1,8 +1,8 @@
 .landing-container{
     margin: 0 auto;
-    padding: 5rem;
     display: flex;
     flex-direction: row;
+    height: 100vh;
 
 }
 
@@ -24,6 +24,32 @@
 .landing-container p{
     font-size: 1.4rem;
  
+}
+
+.hero-left{
+    width: 50%;
+}
+
+.hero-right{
+    width: 50%;
+    background-color: blue;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-half{
+    height:50%;
+}
+
+.hero-inner{
+    padding: 5rem;
+
+}
+
+.landing-img{
+    margin: 0 auto;
+    width: 100%;
 }
 
 .description{

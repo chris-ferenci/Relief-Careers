@@ -7,15 +7,16 @@
     background: #fff;
     padding: 1.5rem 1.5rem;
     color: #2e2e2e;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 1rem;
     position: relative;
     transition: transfrom 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .job-card:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 
 .description-container{
