@@ -8,9 +8,7 @@ import { IconContext } from "react-icons";
 
 function JobBoard() {
 
-    const [activeCountry, setActiveCountry, jobs, setJobs, searchQuery ] = useContext(CountryContext);
-
-
+    const [activeCountry, setActiveCountry, activeExperience, setActiveExperience, jobs, setJobs, searchQuery] = useContext(CountryContext);
     let currentJobs = [];
     
 

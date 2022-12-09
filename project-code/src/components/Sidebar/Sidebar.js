@@ -18,26 +18,47 @@ function Sidebar(){
                 <div>
 
                     <div className="country-space">
-                        <Space country="United States"/>
+                        <Space type="country" value="United States"/>
                     </div>
 
                     <div className="country-space">
-                        <Space country="Canada"/>
+                        <Space type="country" value="Canada"/>
                     </div>
 
                     <div className="country-space">
-                        <Space country="Mexico"/>
+                        <Space type="country" value="Mexico"/>
                     </div>
 
                     <div className="country-space">
-                        <Space country="United Kingdom"/>
+                        <Space type="country" value="United Kingdom"/>
                     </div>
 
                     <div className="country-space">
-                        <Space country="Brazil"/>
+                        <Space type="country" value="Brazil"/>
                     </div>
                 </div>
                 
+                <h2>Select Your Experience</h2>
+
+                <div>
+
+                    <div className="experience-space">
+                        <Space type="experience" value="0-2 years"/>
+                    </div>
+
+                    <div className="experience-space">
+                        <Space type="experience" value="3-4 years"/>
+                    </div>
+
+                    <div className="experience-space">
+                        <Space type="experience" value="5-9 years"/>
+                    </div>
+
+                    <div className="experience-space">
+                        <Space type="experience" value="10+ years"/>
+                    </div>
+
+                </div>
 
                 {/* <Button className="country-button" onClick={() => updateCountry('United States', setActiveCountry)}>
                     <li className="country-text">United States</li>

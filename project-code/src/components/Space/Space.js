@@ -6,13 +6,43 @@ import { CountryContext } from "../../pages/Home";
 
 export default function Space (props) {
 
-    const [activeCountry, setActiveCountry] = useContext(CountryContext);
-    const selected = props.country == activeCountry ? "selected" : "not-selected";
+    const [activeCountry, setActiveCountry, activeExperience, setActiveExperience] = useContext(CountryContext);
+    
+    const type = props.type
+    const selected = ((props.value == activeCountry) | (props.value == activeExperience)) ? "selected" : "not-selected";
+    
+    function clickExperience(value){
+
+        let val = value 
+
+        if (value == activeExperience){
+            setActiveExperience('')
+        }
+        else{
+            setActiveExperience(val)
+        }
+
+    };
+
 
     return (
-        <Button id={selected} className="country-button" onClick={() => setActiveCountry(props.country)}> 
-            <span id="country-text"> {props.country} </span>
-        </Button>
-    );
 
-}
+        <>
+        {(() => {
+        if (type == 'country'){
+        return(
+            <Button id={selected} className="space-button" onClick={() => setActiveCountry(props.value)}> 
+            <span id="space-text"> {props.value} </span>
+            </Button>
+        )}
+        else {
+        return (
+            <Button id={selected} className="space-button" onClick={() => clickExperience(props.value)}> 
+            <span id="space-text"> {props.value} </span>
+            </Button>
+        )}
+        }
+        )()}
+        </>
+
+)};
