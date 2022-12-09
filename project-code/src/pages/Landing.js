@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './landing.css';
-import '../components/Loader/loader.css'
+// import '../components/Loader/loader.css'
 import { FaChevronRight } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import Loader from '../components/Loader/Loader';
