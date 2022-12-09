@@ -9,7 +9,7 @@ import { Icon } from "@blueprintjs/core";
 
 function Header(){
 
-    const [ activeCountry, setActiveCountry, jobs, setJobs, searchQuery, setSearchQuery ] = useContext(CountryContext)
+    const [ activeCountry, setActiveCountry, activeExperience, setActiveExperience, jobs, setJobs, searchQuery, setSearchQuery ] = useContext(CountryContext)
 
     function filterJobs(input){ setSearchQuery(input) };
 

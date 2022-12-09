@@ -14,13 +14,14 @@ function Main() {
 
         
     const [activeCountry, setActiveCountry] = useState('United States');
+    const [activeExperience, setActiveExperience] = useState('')
     const [jobs, setJobs] = useState('');
     const [searchQuery, setSearchQuery] = useState('');
 
     function hitAPI () {
 
         let jobs_data = [];
-        fetch('https://api.reliefweb.int/v1/jobs?appname=apidoc&profile=list&preset=latest&filter[field]=country&filter[value]=' + activeCountry).then((response) => response.json()).then((json_item) => {
+        fetch('https://api.reliefweb.int/v1/jobs?appname=apidoc&profile=list&preset=latest&&fields[include][]=experience.name&filter[operator]=AND&filter[conditions][0][field]=country&filter[conditions][0][value]='+activeCountry+'&filter[operator]=AND&filter[conditions][1][field]=experience.name&filter[conditions][1][value]='+activeExperience).then((response) => response.json()).then((json_item) => {
             json_item['data'].forEach((item) => {
                 jobs_data.push({
                     id: item['id'],
@@ -30,6 +31,7 @@ function Main() {
                     countries: item['fields']['country'],
                     sources: item['fields']['source'],
                     url: item['fields']['url'],
+                    experience: item['fields']['experience']['name'],
                     href: item['href']
                 });
             });
@@ -43,11 +45,11 @@ function Main() {
 
     useEffect(() => {
         hitAPI();
-    }, [activeCountry]);
+    }, [activeCountry, activeExperience]);
 
     return(
         <div id='grid-container'>
-            <CountryContext.Provider value={[activeCountry, setActiveCountry, jobs, setJobs, searchQuery, setSearchQuery]}>
+            <CountryContext.Provider value={[activeCountry, setActiveCountry, activeExperience, setActiveExperience, jobs, setJobs, searchQuery, setSearchQuery]}>
                 <Header />
                 <Sidebar />
                 <JobBoard />

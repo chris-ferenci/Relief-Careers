@@ -8,7 +8,7 @@ import { IconContext } from "react-icons";
 
 function JobBoard() {
 
-    const [activeCountry, setActiveCountry, jobs, setJobs, searchQuery] = useContext(CountryContext);
+    const [activeCountry, setActiveCountry, activeExperience, setActiveExperience, jobs, setJobs, searchQuery] = useContext(CountryContext);
     let currentJobs = [];
 
     //Having to do this because when I do a forEach on jobs, the code fails for some reason ~ Rohan
