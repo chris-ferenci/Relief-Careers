@@ -4,7 +4,7 @@ import "./App.css";
 import Landing from './pages/Landing';
 
 // Router
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 
 function App() {

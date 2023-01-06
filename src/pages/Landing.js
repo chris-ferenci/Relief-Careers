@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './landing.css';
 import '../components/Loader/Loader.css'
 import { FaChevronRight } from "react-icons/fa";
@@ -30,11 +31,11 @@ function Landing() {
                     </p>
                 </article>
 
-                <a href="/browsejobs" className="btn btn-primary btn-large">
+                <Link to="/browsejobs" className="btn btn-primary btn-large">
                     Browse Careers
                     <IconContext.Provider value={{ size: "1.2rem" }}><FaChevronRight />
                     </IconContext.Provider>
-                </a>
+                </Link>
             </article>
 
         </section>
