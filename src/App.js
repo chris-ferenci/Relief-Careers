@@ -4,21 +4,22 @@ import "./App.css";
 import Landing from './pages/Landing';
 
 // Router
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 function App() {
 
   return(
 
-    <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Landing />}>
-          </Route>
-          <Route path="/browsejobs" element={<Home />}>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+    <>
+      <Routes>
+        <Route path="/" element={<Landing />}>
+        </Route>
+        <Route path="/browsejobs" element={<Home />}>
+        </Route>
+      </Routes>
+    </>
+
      
 
    )
